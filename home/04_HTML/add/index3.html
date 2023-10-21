@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework3.3base</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td width="60%">
+                <h1>HOW-TO: Программа на Python, Часть 3</h1>
+
+                <ul>
+                    <li> <em> <a href="index1.html">Программа на Python — часть 1</a></em> </li>
+                    <li> <em> <a href="index2.html">Программа на Python — часть 2</a></em> </li>
+                    <li> <em> <a href="index3.html">Программа на Python — часть 3</a></em> </li>
+                </ul>
+
+                <h2 id="link9">Содержание</h2>
+
+                <h3>HOW-TO: Программа на Python, Часть 3</h3>
+                <ul>
+                    <li><a href="#link7"> Модули</a></li>
+                    <li><a href="#link8"> Функции</a></li>
+                </ul>
+            </td>
+            <td width="40%"><img src="../media/Icon-Python.png"></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+        присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и
+        функции. Давайте начнём.</p>
+    <h2 id="link7">Модули</h2>
+    <a href="#link9">К содержанию</a>
+    <br>
+    <br>Модули предлагают способ расширить программирование на Python. Вы можете создать
+    свои модули, использовать те, которые поставляются с Python или которые написали
+    другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+    Список модулей, поставляемых с Python, находится по адресу:</br>
+    <u><i>http://docs.python.org/modindex.html</i></u>. Некоторые модули предназначены для определённых
+    операционных систем, но большинство из них кроссплатформенные и работают
+    одинаково на <a href="https://ru.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, <a
+        href="https://ru.wikipedia.org/wiki/MacOS" target="_blank">Mac</a> и <a
+        href="https://ru.wikipedia.org/wiki/Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего
+    модуля
+    необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+    называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+    используем этот модуль в нашем первом примере.</p>
+    <br>
+    <code>#=======================================</code></br>
+    <code># random_example.py</code></br>
+    <code># Module example using the random module</code></br>
+    <code>#=======================================</code></br>
+    <code>import random</code></br>
+    <code># print 14 random integers</code></br>
+    <code>for cntr in range(1,15):</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print random.randint(1,10)
+    </code>
+    <p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+        мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+        модуль «random». Мы должны явно указать Python на это.</p>
+    <hr>
+    <h2 id="link8">Функции</h2>
+    <a href="#link9">К содержанию</a>
+    <br>
+    <p>Когда мы импортировали модуль random, мы использовали функцию <b>randint()</b>. Функция
+        — это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+        более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+        того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+        больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+        простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+        сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+        результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+        чисел. Тогда наш пример будет выглядеть как код ниже.
+    </p>
+    <code>#silly example</code></br>
+    <code>print '%d + %d = %d ' % (1,2,1+2)</code></br>
+    <code>print '%d * %d = %d ' % (1,2,1*2)</code></br>
+    <code>print '%d - %d = %d ' % (1,2,1-2)</code></br>
+    <br>
+    <code>print '\n'</code></br>
+    <code>print '%d + %d = %d ' % (1,4,1+4)</code></br>
+    <code>print '%d * %d = %d ' % (1,4,1*4)</code></br>
+    <code>print '%d - %d = %d ' % (1,4,1-4)</code></br>
+    <br>
+    <code>print '\n'</code></br>
+    <code>print '%d + %d = %d ' % (10,5,10+5)</code></br>
+    <code>print '%d * %d = %d ' % (10,5,10*5)</code></br>
+    <code>print '%d - %d = %d ' % (10,5,10-5)</code></br>
+    <code>print '\n'</code>
+    <p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+        написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+        назовём <i><b>«DoTwo»</b></i>. Она будет каждый раз брать два числа, проводить математические
+        операции и выводить результат. Начнём с ключевого слова <i><b>«def»</b></i>, которое сигнализирует
+        о том, что мы собираемся определить функцию. После слова <i><b>«def»</b></i> добавим название
+        функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+        необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+        улучшенный простой пример (<u>№2</u>) показан ниже.</p>
+    <br>
+    <code>#silly example 2...still silly, but better</code></br>
+    <code>def DoTwo(num1,num2):</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print '%d + %d = %d ' % (num1,num2,num1+num2)</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print '%d * %d = %d ' % (num1,num2,num1*num2)</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print '%d - %d = %d ' % (num1,num2,num1-num2)</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print '\n'</code></br>
+    <code>DoTwo(1,2)</code></br>
+    <code>DoTwo(1,4)</code></br>
+    <code>DoTwo(10,5)</code>
+    <p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы
+        сможем сделать это, не создавая проблем для нашей
+        программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</p>
+
+    <table align="center" ; width="100%">
+        <tr>
+            <td align="left"><button><a href="index2.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg></a></button></td>
+            <td align="center"> <button><a href="#link9"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                        </svg></a></button> </td>
+            <td align="right"><button><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg></a></button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework4.1base</title>
+
+</head>
+
+<body>
+
+
+    <table>
+        <tr>
+            <td width="60%">
+                <h1> HOW-TO: Программа на Python, Часть 1</h1>
+                <ul>
+                    <li> <em> <a href="index1.html">Программа на Python — часть 1</a></em> </li>
+                    <li> <em> <a href="index2.html">Программа на Python — часть 2</a></em> </li>
+                    <li> <em> <a href="index3.html">Программа на Python — часть 3</a></em> </li>
+                </ul>
+                <h2 id="link3">Содержание</h2>
+
+                <h3>HOW-TO: Программа на Python, Часть 1</h3>
+                <ul>
+                    <li> <a href="#link1">Наша первая программа</a></li>
+                    <li> <a href="#link2">Пример цикла For</a></li>
+                </ul>
+            </td>
+            <td width="40%"><img src="../media/Icon-Python.png"></td>
+        </tr>
+    </table>
+
+
+
+    <p>Из множества существующих языков программирования Python — один из самых лёгких
+        в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+        Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+        обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+        создание консольных приложений, а в следующей — программирование графических
+        интерфейсов (<ins>GUI</ins>). Давайте создадим простую программу прямо сейчас.
+    </p>
+    <h2 id="link1">Наша первая программа</h2>
+    <a href="#link3">К содержанию</a>
+    <br>
+    <p>Наберём код в текстовом редакторе (например, в <strong>gedit</strong>). Потом мы разберёмся, что делает
+        каждая строка и пойдём дальше.
+    </p>
+    <p>Введите эти 4 строки:</p>
+    <br>
+    <code>#!/usr/bin/env python</code></br>
+    <code>print 'Hello. I am a python program.'</code></br>
+    <code>name = raw_input("What is your name?")</code></br>
+    <code>print "Hello there, " + name + "!"</code>
+    <p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке
+        <strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать
+        программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+        этого введите в терминале
+    </p>
+    <code><u><i><b>chmod +x hello.py</b></i></u></code>
+    <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+    <br>
+    <code>greg@earth:~/python_examples$ ./hello.py</code></br>
+    <code>Hello. I am a python program.</code></br>
+    <code>What is your name? Ferd Burphel</code></br>
+    <code>Hello there, Ferd Burphel!</code></br>
+    <code>greg@earth:~/python_examples$</code>
+    <p>Вот и всё. </p>
+    <h2 id="link2">Пример цикла For</h2>
+    <a href="#link3">К содержанию</a>
+    <br>
+    <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+        редактор и наберите следующую программу:</p>
+    <br>
+    <code>#!/usr/bin/env python</code></br>
+    <code>for cntr in range(0,10):</code></br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print cntr</code>
+    <p><i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i>Это важно. В
+        Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки
+        как в других языках программирования, а отступы.</p>
+    <table align="center" ; width="100%">
+        <tr>
+            <td align="left"><button><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg></a></button></td>
+            <td align="center"> <button><a href="#link3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                        </svg></a></button> </td>
+            <td align="right"><button><a href="index2.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg></a></button></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
