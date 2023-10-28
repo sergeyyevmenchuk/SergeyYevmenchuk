@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Форма заявки на работу в зоопарке</h1>
+    <p><i>Пожалуйста, заполните форму. Обязательные поля помечены<sup>*</sup></i></p>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" target="_blank">
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <p>Имя<sup>*</sup><input type="text" name="name"></p>
+            <p>Телефон<input type="tel" name="phone"></p>
+            <p>Email<sup>*</sup><input type="email" name="email"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <p>Возраст<sup>*</sup><input type="number" name="Age"></p>
+            <p>Пол<select name="gender">
+                    <option>Мужчина</option>
+                    <option>Женщина</option>
+                </select>
+            </p>
+            <p>Перечислите личные качества
+                <textarea name="Text">
+                </textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите ваших любимых животных</legend>
+            <input type="checkbox" name="a" value="Зебра">Зебра
+            <input type="checkbox" name="b" value="Кошак">Кошак
+            <input type="checkbox" name="c" value="Человек">Человек
+            <input type="checkbox" name="d" value="Анаконда">Анаконда <br>
+            <input type="checkbox" name="e" value="Слон">Слон
+            <input type="checkbox" name="f" value="Антилопа">Антилопа
+            <input type="checkbox" name="g" value="Голубь">Голубь
+            <input type="checkbox" name="h" value="Краб">Краб
+        </fieldset>
+        <input type="submit" value="Отправить информацию">
+    </form>
+</body>
+
+</html>
