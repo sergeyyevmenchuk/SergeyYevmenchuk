@@ -160,7 +160,7 @@
                 <form action="http://fe.it-academy.by/TestForm.php" method="get" target="_blank">
                     <fieldset>
                         <legend>Строка поиска</legend>
-                        <input type="search" name="src1" pattern="[А-Яа-яЁё]" placeholder="Только русские буквы"><br>
+                        <input type="search" name="src1" pattern="^[А-Яа-яЁё]+$" placeholder="Только русские буквы"><br>
                         <input type="tel" name="tel" pattern="+[0-9]{3}-[0-9]{2}-[0-9]{7}"
                             placeholder="+ХХХ-ХХ-ХХХХХХХ"><br>
                         <input type="submit" value="Проверить">
