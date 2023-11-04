@@ -1,0 +1,3 @@
+@import "css/mystyle_for_screen.css" screen;
+
+@import "css/mystyle_for_print.css" print;
