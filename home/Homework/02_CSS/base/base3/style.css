@@ -1,0 +1,33 @@
+.container {
+    background-color: #b7b6bfab;
+}
+
+.menu {
+    width: 15em;
+    background-color: rgb(160 175 175);
+    float: left;
+}
+
+.article {
+    background-color: rgb(130 130 130);
+    margin-bottom: .2em;
+    margin-left: 15.2em;
+}
+
+.clear {
+    clear: both;
+}
+
+.footer {
+    background-color: rgb(160 175 175);
+}
+
+img {
+    float: right;
+    width: 125;
+    margin: 15;
+}
+
+br {
+    clear: both;
+}
