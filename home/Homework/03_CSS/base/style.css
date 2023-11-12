@@ -1,0 +1,72 @@
+div.MenuLevel1 {
+    width: auto;
+
+}
+
+div.MenuLevel1>div {
+    width: 150px;
+    text-align: center;
+    background-color: yellowgreen;
+    border: solid blue 1px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+
+}
+
+div.MenuLevel2 {
+    width: 150px;
+    display: none;
+
+}
+
+div.MenuLevel2>div {
+    background-color: cyan;
+    border: solid blue 1px;
+    cursor: pointer
+}
+
+div.MenuLevel1>div:hover div.MenuLevel2 {
+    display: block;
+    position: absolute;
+    left: 80%;
+    top: 90%;
+    z-index: 1
+}
+
+@media all and (max-width: 880px) {
+    div.MenuLevel1 {
+        width: 150px;
+
+    }
+
+    div.MenuLevel1>div {
+        width: 150px;
+        text-align: center;
+        background-color: yellowgreen;
+        border: solid blue 1px;
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    div.MenuLevel2 {
+        width: 150px;
+        display: none;
+
+    }
+
+    div.MenuLevel2>div {
+        background-color: cyan;
+        border: solid blue 1px;
+        cursor: pointer
+    }
+
+    div.MenuLevel1>div:hover div.MenuLevel2 {
+        display: block;
+        position: absolute;
+        left: 80%;
+        top: 90%;
+        z-index: 1
+    }
+}
