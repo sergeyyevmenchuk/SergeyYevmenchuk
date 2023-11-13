@@ -12,7 +12,7 @@ div.MenuLevel1>div {
     position: relative;
     cursor: pointer;
     float: left;
-    transition: position 3s linear;
+    transition: 3s linear;
 }
 
 div.MenuLevel2 {

@@ -1,0 +1,17 @@
+th {
+    width: auto;
+    background-color: dimgray;
+}
+
+td {
+    border-right-style: dotted;
+    border-bottom-style: dotted;
+}
+
+tr:nth-child(odd) {
+    background: rgb(110, 106, 106);
+}
+
+tr:hover {
+    background: red;
+}

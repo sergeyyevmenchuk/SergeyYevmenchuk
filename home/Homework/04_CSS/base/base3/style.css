@@ -1,0 +1,23 @@
+.chess {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.tr div {
+    display: table-cell;
+    width: 100px;
+    height: 100px;
+    border: solid 1px;
+    co
+}
+
+.chess .tr:nth-child(odd) div:nth-child(odd) {
+    background-color: black;
+}
+
+.chess .tr:nth-child(even) div:nth-child(even) {
+    background-color: black;
+}
